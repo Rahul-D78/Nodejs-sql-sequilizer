@@ -15,5 +15,5 @@ jobs:
     - name: Build the Docker image
       run:
         docker build . --file Dockerfile --tag docker.pkg.github.com/sample/app:$(date +%s)
-        docker login docker.pkg.github.com --username Rahul-D78 --password ${{secrets.GITHUB_TOKEN}}
+        docker login docker.pkg.github.com --user Rahul-D78 --password ${{secrets.GITHUB_TOKEN}}
         docker push docker.pkg.github.com/sample/app:$(date +%s)
