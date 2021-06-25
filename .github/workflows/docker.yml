@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run:
+        VERSION=$(date +%s)
+        docker build . --file Dockerfile --tag docker.pkg.github.com/nodejs/app:${VERSION}
+        docker login docker.pkg.github.com --username Rahul-D78 --password ${{secrets.GITHUB_TOKEN}}
+        docker push docker.pkg.github.com/nodejs/app:${VERSION}
