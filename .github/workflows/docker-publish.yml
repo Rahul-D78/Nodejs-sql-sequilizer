@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Build and push Docker image and publish to github packages
         run: 
-         VERSION=$(date + %s) 
-         docker build . --filename Dockerfile --tag docker.pkg.github.com/Rahul-D78/Nodejs-sql-sequilizer/app:${VERSION}
+         VERSION=$(date +%s) 
+         docker build . --file Dockerfile --tag docker.pkg.github.com/Rahul-D78/Nodejs-sql-sequilizer/app:${VERSION}
          docker login docker.pkg.github.com --username Rahul-D78 --password ${{secrets.GITHUB_TOKEN}}
          docker push docker.pkg.github.com/Rahul-D78/Nodejs-sql-sequilizer/app:${VERSION}
