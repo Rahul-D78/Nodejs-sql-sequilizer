@@ -1,0 +1,23 @@
+{
+  "name": "Nodejs-sql-sequilizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rahul-D78/Nodejs-sql-sequilizer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rahul-D78/Nodejs-sql-sequilizer/issues"
+  },
+  "homepage": "https://github.com/Rahul-D78/Nodejs-sql-sequilizer#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
