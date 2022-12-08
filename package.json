@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/Rahul-D78/Nodejs-sql-sequilizer#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.18.2"
   }
 }
